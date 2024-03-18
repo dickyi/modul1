@@ -9,6 +9,8 @@ public class Modul1202357201054 {
             {4, 6, 4, 2, 8, 4, 2, 10},
             {4, 6, 4, 2, 8, 4, 2, 10}
         };
+        
+        //a
         System.out.println("Array Awal : ");
         for (int a = 0; a < data.length; a++) {
             double ratarata = 0.0;
@@ -21,6 +23,7 @@ public class Modul1202357201054 {
             ratarata /= data[a].length;
             System.out.println("\nrata rata array = " + ratarata);
         }
+        
         //b
         int nilaiDicari = Integer.parseInt(JOptionPane.showInputDialog("Masukkan nilai yang ingin dicari:"));
         boolean ditemukan = false;
@@ -46,6 +49,17 @@ public class Modul1202357201054 {
                 System.out.println();
             }
         }
+        
+        //c
+        int totalKolom = 0;
+        for (int a = 0; a < data.length; a++) {
+            for (int b = 0; b < data[a].length; b++) {
+                if (b % 2 != 0) {
+                    totalKolom += data[a][b];
+                }
+            }
+        }
+        System.out.println("Total elemen dengan indeks kolom ganjil : " + totalKolom);
     }
 
 }
